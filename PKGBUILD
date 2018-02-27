@@ -7,14 +7,14 @@
 #
 pkgname="zfs-utils-common-git"
 
-pkgver=2018.02.24.r3336.2a0428f16
+pkgver=2018.02.26.r3338.8b5814393
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 depends=("")
 makedepends=("git")
 arch=("x86_64")
 url="http://zfsonlinux.org/"
-source=("git+https://github.com/zfsonlinux/zfs.git#commit=2a0428f16b93b7d5160c277dd678e65ad27d996f"
+source=("git+https://github.com/zfsonlinux/zfs.git#commit=8b5814393f43d7eb7e4319120529d957a5f7bf8e"
         "zfs-utils.bash-completion-r1"
         "zfs-utils.initcpio.install"
         "zfs-utils.initcpio.hook")
