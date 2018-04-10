@@ -21,7 +21,7 @@ source=("git+https://github.com/zfsonlinux/zfs.git#commit=74df0c5e251a920a1966a0
 sha256sums=("SKIP"
             "b60214f70ffffb62ffe489cbfabd2e069d14ed2a391fac0e36f914238394b540"
             "e33adabbe3f2f4866802c9d63c7810c7a42b4df2288d0cdd23376519b15b36e4"
-            "3eb874cf2cbb6c6a0e1c11a98af54f682d6225667af944b43435aeabafa0112f")
+            "290b18f538badce2eedd4ac4926a579535ec6c887436569fa6ff3685b55776bf")
 license=("CDDL")
 groups=("archzfs-linux-git")
 provides=("zfs-utils")
