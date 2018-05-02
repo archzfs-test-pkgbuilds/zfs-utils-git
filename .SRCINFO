@@ -9,7 +9,6 @@ pkgbase = zfs-utils-common-git
 	license = CDDL
 	makedepends = git
 	depends = python2
-	depends = 
 	provides = zfs-utils
 	conflicts = zfs-utils-common
 	conflicts = zfs-utils-linux-git
