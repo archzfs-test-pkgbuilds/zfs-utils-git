@@ -19,10 +19,12 @@ pkgbase = zfs-utils-common-git
 	source = zfs-utils.bash-completion-r1
 	source = zfs-utils.initcpio.install
 	source = zfs-utils.initcpio.hook
+	source = zfs-utils.initcpio.zfsencryptssh.install
 	sha256sums = SKIP
 	sha256sums = b60214f70ffffb62ffe489cbfabd2e069d14ed2a391fac0e36f914238394b540
 	sha256sums = 335e309ebf5b74fd8956f5e8805939c37d4008b0bcc3b00be6e7ef1d5b7c1669
-	sha256sums = 290b18f538badce2eedd4ac4926a579535ec6c887436569fa6ff3685b55776bf
+	sha256sums = 9b8ab728083b3863bd5f63b02372149174da7ea8fe55df5a1489ca44d6ee8695
+	sha256sums = 29080a84e5d7e36e63c4412b98646043724621245b36e5288f5fed6914da5b68
 
 pkgname = zfs-utils-common-git
 

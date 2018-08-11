@@ -17,11 +17,13 @@ url="http://zfsonlinux.org/"
 source=("git+https://github.com/zfsonlinux/zfs.git#commit=c8c308362c2f0a43adbe21a44b3443a27d2c7ca9"
         "zfs-utils.bash-completion-r1"
         "zfs-utils.initcpio.install"
-        "zfs-utils.initcpio.hook")
+        "zfs-utils.initcpio.hook"
+        "zfs-utils.initcpio.zfsencryptssh.install")
 sha256sums=("SKIP"
             "b60214f70ffffb62ffe489cbfabd2e069d14ed2a391fac0e36f914238394b540"
             "335e309ebf5b74fd8956f5e8805939c37d4008b0bcc3b00be6e7ef1d5b7c1669"
-            "290b18f538badce2eedd4ac4926a579535ec6c887436569fa6ff3685b55776bf")
+            "9b8ab728083b3863bd5f63b02372149174da7ea8fe55df5a1489ca44d6ee8695"
+            "29080a84e5d7e36e63c4412b98646043724621245b36e5288f5fed6914da5b68")
 license=("CDDL")
 groups=("archzfs-linux-git")
 provides=("zfs-utils")
@@ -57,5 +59,6 @@ package() {
     # Install the support files
     install -D -m644 "${srcdir}"/zfs-utils.initcpio.hook "${pkgdir}"/usr/lib/initcpio/hooks/zfs
     install -D -m644 "${srcdir}"/zfs-utils.initcpio.install "${pkgdir}"/usr/lib/initcpio/install/zfs
+    install -D -m644 "${srcdir}"/zfs-utils.initcpio.zfsencryptssh.install "${pkgdir}"/usr/lib/initcpio/install/zfsencryptssh
     install -D -m644 "${srcdir}"/zfs-utils.bash-completion-r1 "${pkgdir}"/usr/share/bash-completion/completions/zfs
 }
