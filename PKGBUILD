@@ -37,7 +37,7 @@ build() {
     ./autogen.sh
     ./configure --prefix=/usr --sysconfdir=/etc --sbindir=/usr/bin --with-mounthelperdir=/usr/bin \
                 --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include \
-                --with-udevdir=/lib/udev --libexecdir=/usr/lib/zfs-0.7.9 \
+                --with-udevdir=/lib/udev --libexecdir=/usr/lib/zfs-${pkgver} \
                 --with-config=user --enable-systemd
     make
 }
