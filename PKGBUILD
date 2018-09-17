@@ -11,7 +11,6 @@ _commit='5140a58f3b2a25ce24ff9ae2b01277cd6c64f5ad'
 pkgver=2018.09.13.r4723.g5140a58f3
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
-depends=("python2")
 makedepends=("git")
 arch=("x86_64")
 url="http://zfsonlinux.org/"
@@ -27,9 +26,9 @@ sha256sums=("SKIP"
             "29080a84e5d7e36e63c4412b98646043724621245b36e5288f5fed6914da5b68")
 license=("CDDL")
 groups=("archzfs-linux-git")
-provides=("zfs-utils")
+provides=("zfs-utils" "spl-utils")
 install=zfs-utils.install
-conflicts=('zfs-utils-common' 'spl-utils-common' 'spl-utils-common-git')
+conflicts=("zfs-utils" "spl-utils")
 replaces=("spl-utils-common-git")
 backup=('etc/zfs/zed.d/zed.rc' 'etc/default/zfs')
 
