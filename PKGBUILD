@@ -5,10 +5,10 @@
 #
 # http://github.com/archzfs/archzfs
 #
-pkgname="zfs-utils-common-git"
-_commit='145c88fb7bfb7e5941a0994daa3d9f4401a167a1'
+pkgname="zfs-utils-git"
+_commit='0500bfd0b9f1393af5bae274551147c5b31e7ccc'
 
-pkgver=2018.09.18.r4729.g145c88fb7
+pkgver=2018.11.09.r4825.g0500bfd0b
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 makedepends=("git")
@@ -21,7 +21,7 @@ source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}"
         "zfs-utils.initcpio.zfsencryptssh.install")
 sha256sums=("SKIP"
             "b60214f70ffffb62ffe489cbfabd2e069d14ed2a391fac0e36f914238394b540"
-            "6e5e905a322d0426acdcbc05c5651ec78ee7b874b96d3c429c80f68b061170c5"
+            "29a8a6d76fff01b71ef1990526785405d9c9410bdea417b08b56107210d00b10"
             "ae1cda85de0ad8b9ec8158a66d02485f3d09c37fb13b1567367220a720bcc9a5"
             "29080a84e5d7e36e63c4412b98646043724621245b36e5288f5fed6914da5b68")
 license=("CDDL")
@@ -29,7 +29,7 @@ groups=("archzfs-linux-git")
 provides=("zfs-utils" "spl-utils")
 install=zfs-utils.install
 conflicts=("zfs-utils" "spl-utils")
-replaces=("spl-utils-common-git")
+replaces=("spl-utils-common-git" "zfs-utils-common-git")
 backup=('etc/zfs/zed.d/zed.rc' 'etc/default/zfs')
 
 build() {
