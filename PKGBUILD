@@ -21,7 +21,7 @@ source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}"
         "zfs-utils.initcpio.zfsencryptssh.install")
 sha256sums=("SKIP"
             "b60214f70ffffb62ffe489cbfabd2e069d14ed2a391fac0e36f914238394b540"
-            "6e5e905a322d0426acdcbc05c5651ec78ee7b874b96d3c429c80f68b061170c5"
+            "29a8a6d76fff01b71ef1990526785405d9c9410bdea417b08b56107210d00b10"
             "ae1cda85de0ad8b9ec8158a66d02485f3d09c37fb13b1567367220a720bcc9a5"
             "29080a84e5d7e36e63c4412b98646043724621245b36e5288f5fed6914da5b68")
 license=("CDDL")
