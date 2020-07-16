@@ -6,9 +6,9 @@
 # http://github.com/archzfs/archzfs
 #
 pkgname="zfs-utils-git"
-_commit='07bc2bc2319655c0a9dd92f4a732467bfeac4874'
+_commit='23c871671c7bc2c79ad6ec1804715f405058cdb6'
 
-pkgver=2020.02.03.r5693.g07bc2bc23
+pkgver=2020.07.15.r6052.g23c871671
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 makedepends=("python" "python-setuptools" "python-cffi" "git")
@@ -36,7 +36,7 @@ build() {
     ./autogen.sh
     ./configure --prefix=/usr --sysconfdir=/etc --sbindir=/usr/bin --with-mounthelperdir=/usr/bin \
                 --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include \
-                --with-udevdir=/lib/udev --libexecdir=/usr/lib/zfs-${pkgver} \
+                --with-udevdir=/usr/lib/udev --libexecdir=/usr/lib \
                 --with-config=user --enable-systemd --enable-pyzfs
     make
 }
@@ -48,9 +48,6 @@ package() {
     rm -r "${pkgdir}"/etc/init.d
     rm -r "${pkgdir}"/usr/share/initramfs-tools
     rm -r "${pkgdir}"/usr/lib/modules-load.d
-    # move module tree /lib -> /usr/lib
-    cp -r "${pkgdir}"/{lib,usr}
-    rm -r "${pkgdir}"/lib
     # Autoload the zfs module at boot
     mkdir -p "${pkgdir}/etc/modules-load.d"
     printf "%s\n" "zfs" > "${pkgdir}/etc/modules-load.d/zfs.conf"
