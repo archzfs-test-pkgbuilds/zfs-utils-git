@@ -6,9 +6,9 @@
 # http://github.com/archzfs/archzfs
 #
 pkgname="zfs-utils-git"
-_commit='ab6a0e236e2ada3c88882b52f9060a0fdac29fec'
+_commit='f20fb199e60722abc052b6034bddb6b83d870c99'
 
-pkgver=2020.10.16.r6318.gab6a0e236
+pkgver=2021.06.25.r6982.gf20fb199e
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 makedepends=("python" "python-setuptools" "python-cffi" "git")
@@ -21,8 +21,8 @@ source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}"
         "zfs-utils.initcpio.zfsencryptssh.install")
 sha256sums=("SKIP"
             "29a8a6d76fff01b71ef1990526785405d9c9410bdea417b08b56107210d00b10"
-            "78e038f95639c209576e7fa182afd56ac11a695af9ebfa958709839ff1e274ce"
-            "29080a84e5d7e36e63c4412b98646043724621245b36e5288f5fed6914da5b68")
+            "ad3e7244aca20fce005860c5118d46a77a0b4f5644d73e9648ea3ba5ff87c4c3"
+            "93e6ac4e16f6b38b2fa397a63327bcf7001111e3a58eb5fb97c888098c932a51")
 license=("CDDL")
 groups=("archzfs-linux-git")
 provides=("zfs-utils" "spl-utils")
