@@ -22,7 +22,8 @@ build() {
         zstreamdump \
         /lib/udev/vdev_id \
         /lib/udev/zvol_id \
-        findmnt
+        findmnt \
+        udevadm
 
     map add_file \
         /lib/udev/rules.d/60-zvol.rules \
@@ -40,6 +41,7 @@ build() {
 
     [[ -f /etc/zfs/zpool.cache ]] && cp "/etc/zfs/zpool.cache" "${BUILDROOT}/etc/zfs/zpool.cache.org"
     [[ -f /etc/modprobe.d/zfs.conf ]] && add_file "/etc/modprobe.d/zfs.conf"
+    [[ -f /etc/fstab ]] && add_file "/etc/fstab"
 }
 
 help() {

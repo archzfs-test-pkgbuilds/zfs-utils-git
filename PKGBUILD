@@ -6,22 +6,22 @@
 # http://github.com/archzfs/archzfs
 #
 pkgname="zfs-utils-git"
-_commit='f20fb199e60722abc052b6034bddb6b83d870c99'
+_commit='07e95b4670dc421ec726a2b4efa97a22fe572005'
 
-pkgver=2021.06.25.r6982.gf20fb199e
+pkgver=2023.12.27.r8950.g07e95b4670
 pkgrel=1
 pkgdesc="Kernel module support files for the Zettabyte File System."
 makedepends=("python" "python-setuptools" "python-cffi" "git")
 optdepends=("python: pyzfs and extra utilities", "python-cffi: pyzfs")
 arch=("x86_64")
-url="https://zfsonlinux.org/"
-source=("git+https://github.com/zfsonlinux/zfs.git#commit=${_commit}"
+url="http://openzfs.org/"
+source=("git+https://github.com/openzfs/zfs.git#commit=${_commit}"
         "zfs-utils.initcpio.install"
         "zfs-utils.initcpio.hook"
         "zfs-utils.initcpio.zfsencryptssh.install")
 sha256sums=("SKIP"
-            "29a8a6d76fff01b71ef1990526785405d9c9410bdea417b08b56107210d00b10"
-            "ad3e7244aca20fce005860c5118d46a77a0b4f5644d73e9648ea3ba5ff87c4c3"
+            "d19476c6a599ebe3415680b908412c8f19315246637b3a61e811e2e0961aea78"
+            "569089e5c539097457a044ee8e7ab9b979dec48f69760f993a6648ee0f21c222"
             "93e6ac4e16f6b38b2fa397a63327bcf7001111e3a58eb5fb97c888098c932a51")
 license=("CDDL")
 groups=("archzfs-linux-git")
@@ -37,7 +37,8 @@ build() {
     ./configure --prefix=/usr --sysconfdir=/etc --sbindir=/usr/bin --with-mounthelperdir=/usr/bin \
                 --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include \
                 --with-udevdir=/usr/lib/udev --libexecdir=/usr/lib \
-                --with-config=user --enable-systemd --enable-pyzfs
+                --with-config=user --enable-systemd --enable-pyzfs \
+                --with-zfsexecdir=/usr/lib/zfs --localstatedir=/var
     make
 }
 
